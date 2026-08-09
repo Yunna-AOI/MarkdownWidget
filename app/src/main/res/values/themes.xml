@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MarkdownWidget" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.MarkdownWidget.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <!-- Radius of the outer bound of widgets to make the rounded corners -->
+        <item name="appWidgetRadius">16dp</item>
+        <!--
+        Radius of the inner view's bound of widgets to make the rounded corners.
+        It needs to be 8dp or less than the value of appWidgetRadius
+        -->
+        <item name="appWidgetInnerRadius">8dp</item>
+    </style>
+
+    <style name="Theme.MarkdownWidget.AppWidgetContainer" parent="Theme.MarkdownWidget.AppWidgetContainerParent">
+        <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
+        <item name="appWidgetPadding">16dp</item>
+    </style>
+
+    <style name="Theme.MarkdownWidget.Fullscreen" parent="Theme.MarkdownWidget">
+        <item name="android:actionBarStyle">
+            @style/Widget.Theme.MarkdownWidget.ActionBar.Fullscreen
+        </item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.MarkdownWidget.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_600</item>
+        <item name="fullscreenTextColor">@color/light_blue_A200</item>
+    </style>
+</resources>
